@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyurSphere - Virtual Garden</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <img src="images/logo-final.png" alt="AyurSphere Logo">
+            </div>
+            <h1 class="site-title">
+                <i class="fas fa-leaf"></i> AyurSphere
+            </h1>
+        </div>
+        
+        <div class="header-center">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search plants, properties, or categories...">
+            </div>
+        </div>
+        
+        <div class="header-right">
+            <button class="notification-btn">
+                <i class="fas fa-bell"></i>
+                <span class="badge">3</span>
+            </button>
+            <div class="user-menu">
+                <span class="username">DU Demo User</span>
+                <button class="logout-btn" id="logoutBtn">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3><i class="fas fa-book"></i> My Library</h3>
+                <ul class="menu-list">
+                    <li class="active">
+                        <i class="fas fa-spa"></i> Browse All Plants
+                    </li>
+                    <li>
+                        <i class="fas fa-heart"></i> My Favorites
+                    </li>
+                    <li>
+                        <i class="fas fa-bookmark"></i> Study Collections
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i> Virtual Garden
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>Categories</h3>
+                <ul class="category-list">
+                    <li><i class="fas fa-seedling"></i> Roots & Rhizomes</li>
+                    <li><i class="fas fa-leaf"></i> Leaves & Herbs</li>
+                    <li><i class="fas fa-spa"></i> Flowers & Buds</li>
+                    <li><i class="fas fa-apple-alt"></i> Seeds & Fruits</li>
+                    <li><i class="fas fa-tree"></i> Bark & Wood</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Hero Banner -->
+            <section class="hero-banner">
+                <div class="hero-content">
+                    <h2>Welcome back, <span id="userGreeting">Demo User</span>!</h2>
+                    <p>Continue exploring the ancient wisdom of Ayurvedic medicine</p>
+                    <button class="add-plant-btn">
+                        <i class="fas fa-plus"></i> Add New Plant
+                    </button>
+                </div>
+            </section>
+
+            <!-- Stats Cards -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-icon plants">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Plants Studied</h3>
+                        <p class="stat-number">127</p>
+                        <span class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> +13 this week
+                        </span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon favorites">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Favorite Plants</h3>
+                        <p class="stat-number">24</p>
+                        <span class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> +2 this week
+                        </span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon collections">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Study Collections</h3>
+                        <p class="stat-number">8</p>
+                        <span class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i> +1 this week
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Plants -->
+            <section class="featured-section">
+                <div class="section-header">
+                    <h2>Featured Medicinal Plants</h2>
+                    <p>Discover these powerful healing plants from ancient Ayurvedic traditions</p>
+                </div>
+
+                <div class="plants-grid">
+                    <!-- Plant Card 1 -->
+                    <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="images/turmeric.jpg" alt="Turmeric">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <span class="plant-badge root">Root</span>
+                        </div>
+                        <div class="plant-info">
+                            <h3>Turmeric</h3>
+                            <p class="scientific-name">Curcuma longa</p>
+                            <div class="plant-tags">
+                                <span class="tag">Anti-inflammatory</span>
+                                <span class="tag">Antioxidant</span>
+                                <span class="tag">Digestive</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plant Card 2 -->
+                    <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="images/ashwagandha.jpg" alt="Ashwagandha">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <span class="plant-badge herb">Herb</span>
+                        </div>
+                        <div class="plant-info">
+                            <h3>Ashwagandha</h3>
+                            <p class="scientific-name">Withania somnifera</p>
+                            <div class="plant-tags">
+                                <span class="tag">Adaptogen</span>
+                                <span class="tag">Stress Relief</span>
+                                <span class="tag">Energy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plant Card 3 -->
+                    <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="images/neem.jpg" alt="Neem">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <span class="plant-badge tree">Tree</span>
+                        </div>
+                        <div class="plant-info">
+                            <h3>Neem</h3>
+                            <p class="scientific-name">Azadirachta indica</p>
+                            <div class="plant-tags">
+                                <span class="tag">Antibacterial</span>
+                                <span class="tag">Antifungal</span>
+                                <span class="tag">Skin Care</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plant Card 4 -->
+                    <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="images/tulsi.jpg" alt="Tulsi">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <span class="plant-badge herb">Herb</span>
+                        </div>
+                        <div class="plant-info">
+                            <h3>Holy Basil (Tulsi)</h3>
+                            <p class="scientific-name">Ocimum sanctum</p>
+                            <div class="plant-tags">
+                                <span class="tag">Immunity</span>
+                                <span class="tag">Respiratory</span>
+                                <span class="tag">Detox</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plant Card 5 -->
+                    <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="images/brahmi.jpg" alt="Brahmi">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <span class="plant-badge herb">Herb</span>
+                        </div>
+                        <div class="plant-info">
+                            <h3>Brahmi</h3>
+                            <p class="scientific-name">Bacopa monnieri</p>
+                            <div class="plant-tags">
+                                <span class="tag">Memory</span>
+                                <span class="tag">Cognitive</span>
+                                <span class="tag">Brain Health</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plant Card 6 -->
+                    <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="images/ginger.jpg" alt="Ginger">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <span class="plant-badge root">Root</span>
+                        </div>
+                        <div class="plant-info">
+                            <h3>Ginger</h3>
+                            <p class="scientific-name">Zingiber officinale</p>
+                            <div class="plant-tags">
+                                <span class="tag">Digestive</span>
+                                <span class="tag">Anti-nausea</span>
+                                <span class="tag">Warming</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
